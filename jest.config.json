@@ -1,0 +1,6 @@
+{
+  "preset": "ts-jest",
+  "moduleNameMapper": {
+    "^@la1ch3/(.*)$": "<rootDir>/$1/src"
+  }
+}
