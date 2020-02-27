@@ -1,0 +1,11 @@
+{
+  "name": "@la1ch3/color-contrast",
+  "version": "0.0.1",
+  "description": "Get the color contrast ratio of two color inputs",
+  "main": "lib/index.js",
+  "author": "Jay Laiche <jay@jaylaiche.com>",
+  "license": "MIT",
+  "dependencies": {
+    "relative-luminance": "^2.0.1"
+  }
+}
