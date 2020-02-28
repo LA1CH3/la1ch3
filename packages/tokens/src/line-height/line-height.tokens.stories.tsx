@@ -8,7 +8,7 @@ import {
   lineHeightHeadingLarge,
   lineHeightHeadingMedium,
   lineHeightHeadingSmall,
-} from '../src/line-height.tokens';
+} from './line-height.tokens';
 
 import {
   fontSizeTiny,
@@ -18,7 +18,7 @@ import {
   fontSizeHuge,
   fontSizeGiant,
   fontSizeMassive,
-} from '../src/font-size.tokens';
+} from '../font-size/font-size.tokens';
 
 const lineHeightStyles = (
   lineHeight: string,

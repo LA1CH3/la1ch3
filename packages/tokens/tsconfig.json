@@ -1,15 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "lib",
-    "tsBuildInfoFile": "../../.build-cache/tokens.tsbuildinfo"
+    "outDir": "lib"
   },
-  "include": ["src/*", "../../typings/*"],
-  "references": [
-    {
-      "path": "../color-contrast",
-      "prepend": false
-    }
-  ]
+  "include": ["./src/**/*.ts", "../../typings/*.ts"]
 }

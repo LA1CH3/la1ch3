@@ -8,7 +8,7 @@ import {
   fontSizeHuge,
   fontSizeGiant,
   fontSizeMassive,
-} from '../src/font-size.tokens';
+} from './font-size.tokens';
 
 interface FontSizeStyles {
   fontSize: string;

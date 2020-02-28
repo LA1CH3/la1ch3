@@ -10,9 +10,9 @@ import {
   colorGray80,
   colorGray90,
   rainbowColors,
-} from '../src/colors.tokens';
+} from './color.tokens';
 
-import { spacingMedium } from '../src/spacing.tokens';
+import { spacingMedium } from '../spacing/spacing.tokens';
 
 export default {
   title: 'Colors',

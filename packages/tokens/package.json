@@ -4,13 +4,14 @@
   "description": "Design system tokens",
   "source": "src/index.ts",
   "main": "lib/index.js",
+  "module": "lib/index.esm.js",
   "types": "lib/index.d.ts",
   "repository": "https://github.com/LA1CH3/la1ch3",
   "author": "Jay Laiche <jay@jaylaiche.com>",
   "license": "MIT",
   "scripts": {
     "prebuild": "rimraf lib",
-    "build": "microbundle build --no-compress",
+    "build": "microbundle --no-compress",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },

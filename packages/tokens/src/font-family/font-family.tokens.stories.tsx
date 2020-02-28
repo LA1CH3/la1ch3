@@ -2,9 +2,9 @@ import React from 'react';
 
 import * as CSS from 'csstype';
 
-import { fontFamily as fontFamilyStack } from '../src/font-family.tokens';
-import { fontSizeMedium } from '../src/font-size.tokens';
-import { lineHeightBodyMedium } from '../src/line-height.tokens';
+import { fontFamily as fontFamilyStack } from './font-family.tokens';
+import { fontSizeMedium } from '../font-size/font-size.tokens';
+import { lineHeightBodyMedium } from '../line-height/line-height.tokens';
 
 const fontFamilyStyles: CSS.Properties = {
   fontSize: fontSizeMedium,

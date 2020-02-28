@@ -1,9 +1,7 @@
 {
   "extends": "../../tsconfig.json",
   "compilerOptions": {
-    "rootDir": "src",
-    "outDir": "lib",
-    "tsBuildInfoFile": "../../.build-cache/color-contrast.tsbuildinfo"
+    "outDir": "lib"
   },
-  "include": ["src/*", "../../typings/*"]
+  "include": ["./src/*.ts", "../../typings/*"]
 }

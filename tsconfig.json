@@ -4,7 +4,6 @@
     "target": "ES5",
     "lib": ["ES2018", "DOM"],
     "moduleResolution": "node",
-    "composite": true,
     "declaration": true,
     "declarationMap": true,
     "downlevelIteration": true,
@@ -13,10 +12,10 @@
     "strict": true,
     "forceConsistentCasingInFileNames": true,
     "jsx": "react",
-    "rootDir": ".",
-    "baseUrl": "./packages",
+    "preserveSymlinks": true,
+    "baseUrl": ".",
     "paths": {
-      "@la1ch3/*": ["./*/src"]
+      "*": ["*", "packages/*", "typings/*"]
     }
   }
 }

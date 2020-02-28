@@ -2,7 +2,7 @@ import React from 'react';
 
 import * as CSS from 'csstype';
 
-import { colorGray10, colorWhite } from '../src/colors.tokens';
+import { colorGray10, colorWhite } from '../color/color.tokens';
 
 import {
   spacingTiny,
@@ -12,7 +12,7 @@ import {
   spacingHuge,
   spacingGiant,
   spacingMassive,
-} from '../src/spacing.tokens';
+} from './spacing.tokens';
 
 export default {
   title: 'Spacing',

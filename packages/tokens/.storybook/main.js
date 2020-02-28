@@ -1,7 +1,7 @@
 const ForkTsCheckerPlugin = require('fork-ts-checker-webpack-plugin');
 
 module.exports = {
-  stories: ['../stories/**/*.stories.tsx'],
+  stories: ['../src/**/*.stories.tsx'],
   addons: ['@storybook/addon-storysource'],
   webpackFinal: async (config) => {
     config.module.rules.push({
@@ -9,9 +9,6 @@ module.exports = {
       use: [
         {
           loader: 'ts-loader',
-          options: {
-            configFile: '../tsconfig.storybook.json',
-          },
         },
         {
           loader: 'react-docgen-typescript-loader',
