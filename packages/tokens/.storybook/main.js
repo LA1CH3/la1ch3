@@ -9,6 +9,9 @@ module.exports = {
       use: [
         {
           loader: 'ts-loader',
+          options: {
+            configFile: '../tsconfig.storybook.json',
+          },
         },
         {
           loader: 'react-docgen-typescript-loader',

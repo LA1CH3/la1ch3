@@ -2,10 +2,20 @@
   "name": "@la1ch3/color-contrast",
   "version": "0.0.1",
   "description": "Get the color contrast ratio of two color inputs",
+  "source": "src/index.ts",
   "main": "lib/index.js",
+  "types": "lib/index.d.ts",
   "author": "Jay Laiche <jay@jaylaiche.com>",
   "license": "MIT",
+  "scripts": {
+    "prebuild": "rimraf lib",
+    "build": "microbundle --no-compress"
+  },
   "dependencies": {
     "relative-luminance": "^2.0.1"
+  },
+  "devDependencies": {
+    "microbundle": "^0.11.0",
+    "rimraf": "^3.0.2"
   }
 }

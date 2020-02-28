@@ -1,4 +1,5 @@
 import React from 'react';
+import { colorContrast, hslToRgb } from '@la1ch3/color-contrast';
 
 import * as CSS from 'csstype';
 
@@ -13,72 +14,51 @@ import {
 
 import { spacingMedium } from '../src/spacing.tokens';
 
-const hslRegex = /hsl\(\d+\,\d+\%\,(\d+)\%\)/;
-
-const getLightnessFromHsl = (hslString: string): string | null => {
-  const lightnessMatch = hslRegex.exec(hslString);
-
-  console.log(hslString);
-  console.log(lightnessMatch);
-
-  if (lightnessMatch !== null) {
-    return lightnessMatch[1];
-  } else {
-    return null;
-  }
-};
-
-const colorContrast = (lighter: string, darker: string): string | null => {
-  const lighterLightness = getLightnessFromHsl(lighter);
-  const darkerLightness = getLightnessFromHsl(darker);
-
-  // from WCAG contrast ratio
-  // https://www.w3.org/TR/WCAG20/#contrast-ratiodef
-  if (darkerLightness && lighterLightness) {
-    return Number(
-      (Number(lighterLightness) + 0.05) / (Number(darkerLightness) + 0.5),
-    ).toFixed(3);
-  } else {
-    return null;
-  }
-};
-
 export default {
   title: 'Colors',
 };
 
 const boxStyles = (
   backgroundColor: string,
-  textColor: string,
-  borderColor: string,
+  foregroundColor: string,
 ): CSS.Properties => ({
   padding: spacingMedium,
   backgroundColor,
-  color: textColor,
+  color: foregroundColor,
   borderWidth: '1px',
   borderStyle: 'solid',
-  borderColor,
+  borderColor: foregroundColor,
 });
 
-export const white = () => (
-  <div style={boxStyles(colorWhite, colorGray10, colorGray10)}>
-    <div>color: white</div>
-    <div>contrast: {colorContrast(colorWhite, colorGray10)}</div>
+const Color = ({ name, background, foreground }) => (
+  <div style={boxStyles(background, foreground)}>
+    <div>color: {name}</div>
+    <div>
+      contrast:{' '}
+      {colorContrast(
+        hslToRgb(foreground) as number[],
+        hslToRgb(background) as number[],
+      ).toFixed(3)}
+    </div>
   </div>
 );
 
+export const white = () => (
+  <Color name="white" background={colorWhite} foreground={colorGray10} />
+);
+
 export const gray10 = () => (
-  <div style={boxStyles(colorGray10, colorWhite, colorWhite)}>gray10</div>
+  <Color name="gray10" background={colorGray10} foreground={colorWhite} />
 );
 
 export const gray60 = () => (
-  <div style={boxStyles(colorGray60, colorGray10, colorGray10)}>gray60</div>
+  <Color name="gray60" background={colorGray60} foreground={colorGray10} />
 );
 
 export const gray80 = () => (
-  <div style={boxStyles(colorGray80, colorGray10, colorGray10)}>gray80</div>
+  <Color name="gray80" background={colorGray80} foreground={colorGray10} />
 );
 
 export const gray90 = () => (
-  <div style={boxStyles(colorGray90, colorGray10, colorGray10)}>gray90</div>
+  <Color name="gray90" background={colorGray90} foreground={colorGray10} />
 );

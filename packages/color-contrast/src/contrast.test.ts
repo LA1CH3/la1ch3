@@ -5,7 +5,6 @@ describe('color contrast', () => {
     const black = [0, 0, 0];
     const white = [255, 255, 255];
     const contrastRatio = colorContrast(white, black);
-    console.log(contrastRatio);
     expect(contrastRatio).toBe(21);
   });
 });
