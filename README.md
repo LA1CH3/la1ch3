@@ -11,6 +11,10 @@ The LA1CH3 design system style is based off the following ideas:
 - Heavy use of black/white, accentuated with bright colors for stark contrast
 - Slight "techiness" - monospace fonts, sharp edges, pixellation
 
+## References
+
+- https://monorepo.guide/
+
 ## Installation
 
 Requires Node.js >= 12.16.1 and npm >= 6.12.1

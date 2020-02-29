@@ -12,6 +12,7 @@
     "build": "microbundle --no-compress"
   },
   "dependencies": {
+    "color-convert": "^2.0.1",
     "relative-luminance": "^2.0.1"
   },
   "devDependencies": {
